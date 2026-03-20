@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sonica-masa-fujii.github.io/sitemap.xml
