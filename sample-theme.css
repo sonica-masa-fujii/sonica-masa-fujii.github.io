@@ -612,6 +612,45 @@ main {
   text-transform: uppercase;
 }
 
+.disclosure {
+  overflow: hidden;
+}
+
+.disclosure-summary {
+  display: block;
+  cursor: pointer;
+  list-style: none;
+}
+
+.disclosure-summary::-webkit-details-marker {
+  display: none;
+}
+
+.disclosure-summary .section-head {
+  position: relative;
+  margin-bottom: 0;
+  padding-right: 28px;
+}
+
+.disclosure-summary .section-head::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--blue);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.disclosure[open] .disclosure-summary .section-head::after {
+  content: "-";
+}
+
+.disclosure-body {
+  padding-top: 0;
+}
+
 .timeline {
   display: grid;
   gap: 14px;
